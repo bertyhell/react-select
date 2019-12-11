@@ -598,7 +598,7 @@ export default class Select extends Component<Props, State> {
   }
   onChange = (newValue: ValueType, actionMeta: ActionMeta) => {
     const { onChange, name } = this.props;
-    onChange(newValue, { ...actionMeta, name });
+    setTimeout(() => onChange(newValue, { ...actionMeta, name }), 10);
   };
   setValue = (
     newValue: ValueType,
